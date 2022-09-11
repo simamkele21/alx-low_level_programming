@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <time.h>
+#include <stdlib.h>:%s/^M$//
+#include <time.h>:%s/^M$//
 #include <stdio.h>
 /**
 * main - print if the number is postive, zero, or negative
