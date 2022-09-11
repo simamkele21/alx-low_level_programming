@@ -1,6 +1,6 @@
-#include <stdlib.h>^M
-#include <time.h>^M
-#include <stdio.h>
+#include <stdlib.h>:%s/^M$//
+#include <time.h>:%s/^M$//
+#include <stdio.h>:%s/^M$//
 /**
 * main - print if the number is postive, zero, or negative
 *
