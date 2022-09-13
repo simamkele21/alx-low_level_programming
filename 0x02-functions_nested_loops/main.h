@@ -17,4 +17,8 @@ int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
 
+<<<<<<< HEAD
 #endif /* MAIN_H */
+=======
+#endif /* MAIN_H */
+>>>>>>> 4c4721517400e166357bdf63c6c5b82521c2beeb
