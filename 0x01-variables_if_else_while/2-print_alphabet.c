@@ -1,16 +1,23 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
+ * Description: print all aplhabet letters
+ *
  * Return: Always 0 (Success)
- */
+*/
+
 int main(void)
 {
-char c = 'a';
+	char ch = 'a';
 
-for (; c <= 'z'; c++)
-putchar(c);
-putchar('\n');
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		++ch;
+	}
+	putchar('\n');
 
-return (0);
+	return (0);
 }

@@ -1,23 +1,30 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdio.h>
+
 /**
  * main - Entry point
  *
+ * Description: print 0, 1, - 9
+ *
  * Return: Always 0 (Success)
- */
+*/
+
 int main(void)
 {
-int i;
-for (i = 0 ; i <= 9 ; i++)
-{
-putchar(i + '0');
-if (i < 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int digit = 0;
+
+	while (digit <= 9)
+	{
+		putchar(digit + 48);
+
+		if (digit != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
+		++digit;
+	}
+	putchar('\n');
+
+	return (0);
 }
