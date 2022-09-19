@@ -17,5 +17,5 @@ int main(void)
 	}
 	printf("%c", total);
 
-	return (0);  
+	return (0);
 }
