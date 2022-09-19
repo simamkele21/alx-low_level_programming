@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strlen - The strlen() accepts an argument of type pointer to char or (char*).
- * @s: declaration of *s and paramters for the function _strlen
- * Return: Always 0.
- */
+* _strlen - The strlen() accepts an argument of type pointer to char or (char*).
+* @s: declaration of *s and paramters for the function _strlen
+* Return: Always 0.
+*/
 int _strlen(char *s)
 {
 	int c;
