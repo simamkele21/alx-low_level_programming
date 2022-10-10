@@ -1,36 +1,91 @@
+#include <stddef.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
- * new_dog - function that creates a new dog
- * @name: name to create a new struct
- * @age: age to create a new struct
- * @owner: owner to create a new struct
+ * _strlen_recursion - return the length of a string
  *
- * Return: dog struct
+ * @s: char pointer
+ *
+ * Return: the length of a string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s != '\0')
+	{
+		return (_strlen_recursion(s + 1) + 1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * _strcpy - copies the string pointed to by src,
+ *               including the terminating null byte (\0),
+ *               to the buffer pointed to by dest
+ *
+ * @dest: char pointer
+ * @src: char pointer
+ *
+ * Return: char*
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int cLoop, size = _strlen_recursion(src);
+
+	for (cLoop = 0; cLoop < size; cLoop++)
+	{
+		dest[cLoop] = src[cLoop];
+	}
+
+	dest[size] = '\0';
+
+	return (dest);
+}
+
+/**
+ * new_dog - creates a new dog
+ *
+ * @name: name parameter
+ * @age: age parameter
+ * @owner: owner parameter
+ *
+ * Return: a new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *n_dog;
+	dog_t *d;
+	int sizeName = _strlen_recursion(name), sizeOwner = _strlen_recursion(owner);
 
-	n_dog =  malloc(sizeof(dog_t));
-	if (n_dog)
+	if (name == NULL || age < 0 || owner == NULL)
+		return (NULL);
+
+	d = malloc(sizeof(dog_t));
+
+	if (d == NULL)
+		return (NULL);
+
+	d->name = malloc(sizeof(char) * sizeName + 1);
+
+	if (d->name == NULL)
 	{
-		n_dog->name = malloc((_strlen(name) + 1) * sizeof(char));
-		if (n_dog->name)
-		{
-			n_dog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
-			if (n_dog->owner)
-			{
-				_strcpy(n_dog->name, name);
-				_strcpy(n_dog->owner, owner);
-				n_dog->age = age;
-				return (n_dog);
-			}
-			else
-				free(n_dog->name);
-				free(n_dog);
-		}
-		else
-			free(n_dog);
+		free(d);
+		return (NULL);
 	}
-	return (NULL);
+
+	d->owner = malloc(sizeof(char) * sizeOwner + 1);
+
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+		return (NULL);
+	}
+
+	_strcpy(d->name, name);
+	_strcpy(d->owner, owner);
+	d->age = age;
+
+	return (d);
 }
