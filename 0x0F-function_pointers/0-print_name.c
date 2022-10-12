@@ -1,9 +1,9 @@
 /**
- * print_name - executes a function given as a parameter on each element
- *              of an array.
- *
- * @name: string to print
- * @f: function pointer
+ * print_name - print a name.
+ * @name: string to print.
+ * @f: function pointer.
+ * 
+ * Return: void.
  */
 void print_name(char *name, void (*f)(char *))
 {
