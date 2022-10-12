@@ -1,1 +1,1 @@
-0x0F. C - Function pointers
+C - Function pointers
