@@ -3,12 +3,10 @@
  *              of an array.
  *
  * @name: string to print
- * @f: printable function
+ * @f: function pointer
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (!name || !f)
-		return;
-
-	f(name);
+	if (name && f)
+			f(name);
 }
