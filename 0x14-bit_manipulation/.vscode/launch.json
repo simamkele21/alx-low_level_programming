@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/Documents/ALX/Projects/alx-low_level_programming/0x13. C - More singly linked lists",
-      "program": "c:/Users/User/Documents/ALX/Projects/alx-low_level_programming/0x13. C - More singly linked lists/build/Debug/outDebug",
+      "cwd": "c:/Users/User/Documents/ALX/Projects/alx-low_level_programming/0x14-bit_manipulation",
+      "program": "c:/Users/User/Documents/ALX/Projects/alx-low_level_programming/0x14-bit_manipulation/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
